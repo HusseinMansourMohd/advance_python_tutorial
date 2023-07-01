@@ -1,4 +1,5 @@
-item1 = myList[-1]
+
+item1 = myList[-1] #print the last 
 print(myList)
 
 for i in myList:
@@ -30,4 +31,4 @@ myList.sort() # or sorted(myList)
 
 #Lists: ordered, mutable, allows duplicate elements
 myList = [0] * 5
-
+myList = [1,2,3,4,5,6]
