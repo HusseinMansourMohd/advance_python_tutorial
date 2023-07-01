@@ -58,3 +58,9 @@ List_cpy.append("lemon")
 print(list_cpy)
 print(list_org)
 
+myList = [1, 2 , 3, 4, 5]
+
+b = [i*i for i in myList]
+
+print(myList)
+print(b)
