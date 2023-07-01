@@ -24,8 +24,10 @@ myList = mylist.remove("apple")
 #Delete all items from the list.
 myList.clear()
 
-printLisy 
-
 myList = [-3, 1, 4, 5, -6]
 
-myList.sort()
+myList.sort() # or sorted(myList)
+
+#Lists: ordered, mutable, allows duplicate elements
+myList = [0] * 5
+
