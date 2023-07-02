@@ -53,7 +53,7 @@ b = a[::-1]
 
 my_tuple = "max", 28 , "Boston"
 
-my_tuple2 = {0, 1, 2, 3 ,4}
+my_tuple2 = (0, 1, 2, 3 ,4) 
 
 name , age , city = my_tuple
 
@@ -63,3 +63,23 @@ i1, *i2, i3 = my_tuple
 print(i1)
 print(i2)  # {}
 print(i3)
+
+#
+
+import sys
+my_List = [0, 1, 2,"hello", True]
+my_tuple = (0, 1, 2, "hello", True)
+print(sys.getsizeof(my_List), "bytes")
+print(sys.getsizeof(my_tuple), "bytes")
+
+import timeit
+print(timeit.timeit(stmt ="[0, 1, 2, 3, 4, 5]"), number=1000000) # 0.16
+
+print(timeit.timeit(stmt = "(0 , 1, 3, 4, 5)"), number = 1000000) # 0.019
+
+
+
+
+
+
+
