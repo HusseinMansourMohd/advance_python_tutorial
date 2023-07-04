@@ -40,15 +40,31 @@ import logging.config
 #     logging.error("this error is %s", traceback.format_exc())
 
 #rotating file handler:
+# import logging
+# from logging.handlers import RotatingFileHandler
+
+# logger = logging.getLogger(__name__)
+# logger.setLevel(logging.INFO)
+
+# #roll over after 2KB , and keep backuo logs app.log.1 , app.log.2
+# handler = RotatingFileHandler('app.log', maxBytes=200, backupCount=5)
+# logger.addHandler(handler)
+
+# for _ in range(10000):
+#     logger.info('hello , world!')
+
+# timed rotated handler
+import time
 import logging
-from logging.handlers import RotatingFileHandler
+from logging.handlers import RotatingFileHandler , TimedRotatingFileHandler
 
 logger = logging.getLogger(__name__)
 logger.setLevel(logging.INFO)
 
 #roll over after 2KB , and keep backuo logs app.log.1 , app.log.2
-handler = RotatingFileHandler('app.log', maxBytes=200, backupCount=5)
+handler = TimedRotatingFileHandler('timed_test.log', maxBytes=200, backupCount=5)
 logger.addHandler(handler)
 
-for _ in range(10000):
+for _ in range(6):
     logger.info('hello , world!')
+    time.sleep()
