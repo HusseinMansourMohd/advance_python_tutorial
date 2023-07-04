@@ -6,15 +6,7 @@ import logging.config
 
 # logger = logging.getLogger('aimpleExample')
 # logger.debug('this is debug message')
-import traceback
 
-try:
-    a = [1,2,3]
-    val = a[4]
-# except IndexError as e: #IndexError as e:
-#     logging.error(e , exc_info=True)
-except:
-    logging.error("this error is %s", traceback.format_exc())
 
 
 # # create handler
@@ -34,3 +26,29 @@ except:
 
 # logger.warning('this a warning')
 # logger.error('this is an error')
+
+
+###
+# import traceback
+
+# try:
+#     a = [1,2,3]
+#     val = a[4]
+# # except IndexError as e: #IndexError as e:
+# #     logging.error(e , exc_info=True)
+# except:
+#     logging.error("this error is %s", traceback.format_exc())
+
+#rotating file handler:
+import logging
+from logging.handlers import RotatingFileHandler
+
+logger = logging.getLogger(__name__)
+logger.setHandler(logging.INFO)
+
+#roll over after 2KB , and keep backuo logs app.log.1 , app.log.2
+handler = RotatingFileHandler('app.log', maxBytes=200, backupCount=5)
+logger.addHandler(handler)
+
+for _ in range(10000):
+    logger.info('hello , world!')
