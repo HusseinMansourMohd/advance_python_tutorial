@@ -44,7 +44,7 @@ import logging
 from logging.handlers import RotatingFileHandler
 
 logger = logging.getLogger(__name__)
-logger.setHandler(logging.INFO)
+logger.setLevel(logging.INFO)
 
 #roll over after 2KB , and keep backuo logs app.log.1 , app.log.2
 handler = RotatingFileHandler('app.log', maxBytes=200, backupCount=5)
