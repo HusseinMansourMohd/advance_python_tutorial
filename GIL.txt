@@ -1,12 +1,12 @@
 GIL: Global interpreter lock 
-A lock that allows only one thread at a timr to execute in python
+A lock that allows only one thread at a tim2 to execute in python
 
-- Needed in Cpyhton becausse memory management is not thread-setFormatter
+- Needed in Cpyhton becausse memory management is not thread-safe . 
 
--Avoid:
+-Avoid when:
     - Use multiprocessing .
     - Use a different, free-thread Python implemention (Jython , IronPyhton).
-    - Use Python as a wrapper for third-party libraties (C/C++) -> numpy , scipy
+    - Use Python as a wrapper for third-party libraties (C/C++) -> numpy , scipy.
 
 
 
