@@ -3,11 +3,11 @@ Process: Am instance of a program (e.g a python interpreter)
 + Takes advantage of multiple CPUs and cores
 + separators memory space -> Memory is not shared Process.
 + Great for CPU-bound processing.
-+ New prrocess is stated independenty from other proccesses.
-+ Processes are interroptable/killable
-+ One GIL for each process -> avoids GIL limitation
++ New prrocess is started independenty from other proccesses.
++ Processes are easly interroptable/killable
++ One GIL for each process -> avoids GIL limitation (GIL: global interpreter lock)
 
-- Heavyweight.
+- Heavyweight.(takes alot of memory)
 - Staring a process is slower than starting a thread.
 - More memory.
 - IPC (inter-process communication) is more complicated.
